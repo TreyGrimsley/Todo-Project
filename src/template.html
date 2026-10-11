@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo Project</title>
+    <script src="https://kit.fontawesome.com/263cf3b7fc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/qvq6uvv.css">
+    <!-- remove later -->
+    
+
+</head>
+<body>
+    <div id="header-div">
+        <button class="header-btn">Customize</button>
+        <h1 id="Title">
+            <img id="logo" src="Images/MainLogo.png" alt="dueLess Logo">
+        </h1>
+        <button class="header-btn">About</button>
+    </div>
+
+    <div id="app-container">
+        
+        <div id="project-content">
+        <!-- 
+            Side bar for storing project names. Project will display 
+                        on screen after name click. 
+        -->
+            <div id="side-bar">
+                <div id="side-bar-content">
+                    <button class="project-title-btn">Project 1</button>
+                    <button popovertarget="add-new-project" class="add-project-btn">Add Project<i class="fa-duotone fa-solid fa-circle-plus" style="--fa-primary-color: rgb(2, 5, 7); --fa-secondary-color: rgb(250, 250, 250);"></i></button>
+                   
+                </div>
+            </div>
+            <div id="project-container">
+
+                <!--Storing all project details submitted through form here-->
+                <div class="project-card">
+                    <h3 class="priority"></h3>
+                    <h1 class="card-title"></h1>
+                    
+                    <h2 class="desc-header">Project Description</h2>
+                    <section class="project-desc">
+
+                    </section>
+                    <h3 class="todo-header">Things To Do:</h3>
+                        <div class="todo-container">
+                            
+                        </div>
+                    <p class="date-due-cap">Date due: </p>
+                    <p class="date-due"> </p>
+                   <div id="removeBtn-div" >
+
+                   </div>
+
+                </div>
+            </div>
+                <dialog id="add-new-project" popover>
+                    <div id="form">
+                        <form action="">
+                            <div id="left-side" >
+
+                            <h1>Add a New Project</h1>
+                            <h3>Project Title</h3>
+                            <input type="text" placeholder="My Title" name="title" class="title" required>
+                            <h2>Add a Description for Your Project</h2>
+                            <textarea placeholder="Enter your project description" name="input-desc" class="input-desc" required></textarea>
+                            <h2>Add Due Date For Project</h2>
+                            <input type="date" name="project-date" class="project-date" required>
+                            <h2>Select Project Priority</h2>
+                            <div id="priority-div">
+                                <input type="radio" class="priority-btn" name="priority-btn" value="low" id="Low" required>Low
+                                <input type="radio" class="priority-btn" name="priority-btn" id="medium" value="Medium" required>Medium
+                                <input type="radio" class="priority-btn" name="priority-btn" id="high" value="HIGH" required>High
+                            </div>
+                            <div id="form-btns">
+                                <button popovertarget="add-new-project" id="close-form-btn" popovertargetaction="hide">Close</button>
+                                <button popovertarget="add-new-project" id="submit-form-btn" >Submit</button>
+                            </div>
+                            </div>
+                            <div id="right-side">
+                                <h1>Add ToDo List Items</h1>
+                                <h3>Keep your project milestones on track</h3>
+                                <button type="button" id="add-new-todo">Add list Item</button>
+                                <div id="todo-item-div">
+                                    <input type="text" class="todo-item" placeholder="Insert new todo item">
+                                </div>
+                                
+                            
+                            </div>
+                        </form>
+                    </div>   
+                </dialog>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

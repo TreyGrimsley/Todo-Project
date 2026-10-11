@@ -1,0 +1,398 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    max-height: 100vh;
+    min-height: 100vh;
+    height: 100vh;
+}
+
+/* All content on page */
+#app-container{
+    display: flex;
+    height: 89vh;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: column;
+    
+    
+
+}
+
+    /* For title Section */
+#header-div{
+    display: flex;
+    flex-direction: row;
+    gap: 15rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 12px 6px -1px rgba(0, 0, 0, 1),
+                0 8px 4px -1px rgba(0, 0, 0, 0.5);
+    
+  
+}
+
+.header-btn{
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-shadow: 1px 2px 1px aquamarine;
+    font-family: "zoologic-style-one", sans-serif;
+    color: rgb(23, 68, 77);
+}
+
+.header-btn:hover{
+    text-shadow: 3px 2px 3px aquamarine;
+    color: dimgray;
+    
+    
+}
+
+#title{
+    width: 100%;
+    display: flex;
+  
+
+}
+
+#logo{
+    height: auto;
+    width: 26rem;
+    display: flex;
+}
+
+
+    /* Project Content Section */
+
+
+    #project-content{
+        flex-direction: row;
+        display: flex;
+        overflow-y: hidden;
+        width: 100%;
+        min-height: 40rem;
+       
+        margin-top: .2rem;
+        
+        
+        background-position: center;
+        background-size: cover;
+        background-image: url(Images/SpaceBackground.png) ;
+    }
+
+    #side-bar{
+        display: grid;
+        grid-template-columns: 20vw;
+        grid-template-rows: 100vh;
+        margin-bottom: 5rem;
+       
+    }
+
+    #side-bar-content{
+        background-color: rgb(14, 44, 49);
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: flex-start;
+        
+        box-shadow: 3px 3px 3px black;
+        margin-bottom: 2rem;
+        overflow-y: auto;
+        
+        
+
+    }
+    
+    .project-title-btn{
+        background-color: none;
+        background: none;
+        border-color: aquamarine;
+        border: none;
+        border-bottom: 2px solid dimgray;
+        color: #ffffff;
+      
+        font: 700;
+        font-size: 1.1rem;
+        margin-top: 1rem;
+        font-family: "setar-l", sans-serif;;
+        margin-left: .3rem;
+        margin-right: .3rem;
+        border-radius: 5px;
+        padding-bottom: 10px;
+    }
+    .project-title-btn:hover{
+        padding: 5px;
+        font-size: 1.4rem;
+        background-color: rgb(23, 68, 77);
+        transform: translate(4px, 4px);
+    }
+    
+
+    .add-project-btn{
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        height: 3rem;
+    }
+
+    .add-project-btn:hover{
+        box-shadow: 3px 3px 3px black;
+        background-color: lightgray;
+    }
+
+    
+
+
+    #project-container{
+        flex-direction: column;
+        display: flex;
+        margin: 1rem 3rem 3rem 3.5rem;
+        
+    }
+
+    /* Designing the cards for the grid */
+
+.project-card{
+       
+       background-color: rgba(49, 121, 115, 0.836);
+       display: block;
+       min-height: 30%;
+        text-shadow: 1px 1px 1px black;
+       height: 92%;
+       width: 65em;
+       border-radius: 15px;
+       color: #ffffff;
+       border: 3px solid black;
+       overflow: auto;
+       resize: vertical;
+    }
+
+    /* Card content */
+.card-title{
+    font-size: 3rem;
+}
+
+.priority{
+    
+    padding: 0 5px;
+    width: 5.5rem;
+    
+    border: 2px solid dimgray;
+    color: lightgrey;
+    border-radius: 7px;
+    letter-spacing: 1px;
+    
+}
+
+.desc-header{
+    font-size: 1.4rem;
+}
+
+.project-desc{
+    line-height: 25px;
+    font-size: 1.2rem;
+    
+    height: auto;
+    margin: 0 30px;
+    display: block;
+    text-align: center;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+    
+}
+
+.todo-header{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 10px;
+}
+.row-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+#todo-container{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+}
+.todo-list{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+    font-size: 1.3rem;
+}
+.todo-list:checked + label{
+    text-decoration: line-through;
+    opacity: .7;
+    transition: all 1s ease;
+    color: rgb(156, 147, 147);
+}
+
+.date-due-cap{
+    font-size: 1.2rem;
+}
+
+.date-due{
+    font-size: 1.2rem;
+}
+
+.remove{
+    margin-bottom: .5rem;
+    margin-left: .3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 7px;
+    height: 1.6rem;
+    text-align: center;
+    background-color: rgb(14, 44, 49);
+    color: #ffffff;
+}
+.remove:hover{
+    border: 3px solid dimgray;
+    
+}
+
+
+
+/* For all Popover Events */
+dialog::backdrop{
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px black;
+    
+}
+#right-side{
+    background-image: url(Images/WoodsBackground.png);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    
+   
+   
+}
+#left-side{
+    background-color: #1b353a;
+    height: 100vh;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    
+}
+#form-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#submit-form-btn{
+    background-color: lightgray;
+    color: black;
+    margin: 1rem 5rem;
+    border-radius: 7px;
+}
+#submit-form-btn:hover{
+    background-color: rgb(255, 253, 253);
+}
+#close-form-btn{
+    background-color: lightgray;
+    color: black;
+    margin: 1rem 5rem;
+    border-radius: 7px;
+}
+#close-form-btn:hover{
+    background-color: rgb(255, 253, 253);
+}
+#add-new-project{
+    width: 80vw;
+    height: 90vh;
+}
+#form h1{
+    font-size: 3rem;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    width: 31rem;
+    height: 2rem;
+    margin-left: 20px;
+    padding-left: 10px;
+    color: rgba(49, 121, 115, 0.836);
+}
+.input-desc{
+    display: flex;
+    justify-content: center;
+    width: 30rem;
+    height: 15rem;
+    margin: 0 20px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px aquamarine;
+    padding: 15px 15px;
+}
+#add-new-todo{
+    background-color: #ffffff;
+    margin: 1rem 6rem;
+    border-radius: 7px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px black;  
+}
+#add-new-todo:hover{
+    background-color: lightgray;
+    color: black;
+    border: none;
+}
+#todo-item-div{
+    display: flex;
+    flex-direction: column;
+}
+.todo-item{
+    border-radius: 7px;
+    height: 1.5rem;
+    margin: .4rem 3rem;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px black;   
+    padding: .3rem .3rem;
+}
+.project-date{
+    border-radius: 7px;
+    margin: 0 2rem;
+    padding: .3rem .3rem;
+}
+#priority-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.priority-btn{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
